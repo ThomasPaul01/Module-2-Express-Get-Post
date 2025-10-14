@@ -31,6 +31,7 @@ app.get('/get-user/:userId', (req, res) => {
     res.send('userId: ' + req.params.userId)
 })
 
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
