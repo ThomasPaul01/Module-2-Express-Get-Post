@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'templates')));
 
 // Serve public assets (CSS, JS, images) under /public
 app.use('/public', express.static(path.join(__dirname, 'public')));
-
+app.use(loggerMiddleware);
 let currentId = 1
 const tasks = []
 
@@ -88,6 +88,8 @@ function loggerMiddleware(request, response, next) {
   console.log(`${request.method} ${request.url}`);
   next();
 }
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

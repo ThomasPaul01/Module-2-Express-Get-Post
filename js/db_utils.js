@@ -23,7 +23,7 @@ const connectionConfig = {
 	database: process.env.PGDATABASE,
 	user: process.env.PGUSER,
 	password: process.env.PGPASSWORD,
-	port: process.env.PGPORT,
+	port: process.env.PGPORT ,
 }
 
 export async function getConnection (username, password, database) {
